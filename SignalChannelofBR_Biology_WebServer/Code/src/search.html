@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CERTAIN GENE</title>
+    <style>
+        h1 {
+            margin-top: 200px;
+            text-align: center;
+            /*border: 3px solid #446844;*/
+            margin-block: 60px;
+            margin-inline: 60px;
+        }
+        .box {
+            width: 500px;
+            height: 40px;
+            border: 20px solid rgba(234, 101, 101, 0.81);
+            margin: auto;
+            border-radius: 25px;
+        }
+        .input{
+            float:left;
+            width:400px;/*宽400*/
+            height:40px;/*高38（因为文本框内外边框要占用1像素所以总体高度减2，其他盒子同理）*/
+            outline:none;
+            border:none;/*取消文本框内外边框*/
+        }
+        .button{
+            float:left;
+            width:96px;
+            height:40px;
+            color:white;
+            background-color: #b491f8;/*将按钮背景设置为红色，字体设置为白*/
+            border:none;
+            outline:none;/*取消边框和外边框将按钮边框去掉*/
+        }
+
+    </style>
+    <script>
+
+        function genetic() {
+            window.open("signal.html")
+        }
+
+    </script>
+    <style>
+        body{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body >
+
+<h1 id="title">GHL GENE POOL</h1>
+<div class="box">
+    <input id="c" type="text" class="input" placeholder="PLEASE INPUT THE NAME OF THE GENE"><input type="submit"  class="button" value="SEARCH" onclick="genetic()">
+</div>
+
+
+
+</body>
+</html>

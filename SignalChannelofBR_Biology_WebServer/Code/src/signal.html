@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            width: 800px;
+            height: 400px;
+            background-size: 1200px,20px;
+        }
+        h1{
+            text-align: left;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>SIGNAL CHANNEL</title>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+
+<body background="./cell.jpg">
+
+<h1>
+    SIGNAL CHANNEL of BR
+</h1>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 700px;height:600px;"></div>
+<script type="text/javascript">
+    const chartDom = document.getElementById('main');
+    const myChart = echarts.init(chartDom);
+    let option;
+
+    option = {
+        title: {
+            text: ''
+        },
+        tooltip: {},
+        animationDurationUpdate: 1500,
+        animationEasingUpdate: 'quinticInOut',
+        series: [
+            {
+                type: 'graph',
+                layout: 'none',
+                symbolSize: 80,
+                roam: true,
+                //color:1,
+                label: {
+                    show: true
+                },
+
+                edgeSymbol: ['circle', 'arrow'],
+                edgeSymbolSize: [4, 10],
+                edgeLabel: {
+                    fontSize: 20
+                },
+                data: [{
+                    name: 'BR',
+                    x: 0,
+                    y: 300
+                }, {
+                    name: 'BRI1',
+                    x: 80,
+                    y: 360
+                }, {
+                    name: 'BAK1',
+                    x: 80,
+                    y: 260
+                }, {
+                    name: 'BSK1',
+                    x: 100,
+                    y: 320
+                },
+                    {
+                        name: 'BSU1',
+                        x: 140,
+                        y: 300
+                    },
+                    {
+                        name: 'BIN2',
+                        x: 210,
+                        y: 260
+                    },
+                    {
+                        name: 'BZR1',
+                        x: 200,
+                        y: 330
+                    },
+                    {
+                        name: 'BZR2',
+                        x: 205,
+                        y: 380
+                    }
+                ],
+                // links: [],
+                links: [
+                    {
+                    source: 'BR',
+                    target: 'BRI1',
+                    label: {
+                        show:false
+                    },
+
+                    lineStyle: {
+                        curveness: -0.3
+                    }
+
+                }, {
+                    source: 'BR',
+                    target: 'BAK1',
+                        lineStyle: {
+                            curveness: 0.3
+                        }
+                }, {
+                    source: 'BSK1',
+                    target: 'BSU1'
+                }, {
+                    source: 'BSU1',
+                    target: 'BIN2'
+                }, ],
+                lineStyle: {
+                    opacity: 0.9,
+                    width: 2,
+                    curveness: 0
+                }
+
+
+            },
+            {
+                type: 'graph',
+                layout: 'none',
+                symbolSize: 50,
+                roam: true,
+                //color:1,
+                label: {
+                    show: true
+                },
+
+                edgeSymbol: ['circle', 'arrow'],
+                edgeSymbolSize: [4, 10],
+                edgeLabel: {
+                    fontSize: 20
+                },
+                data: [{
+                    name: 'PP2C',
+                    x: 0,
+                    y: 200
+                }, {
+                    name: 'SnRK',
+                    x: 20,
+                    y: 260
+                }, {
+                    name: 'AREB',
+                    x: 100,
+                    y: 200
+                }, {
+                    name: 'ABI5',
+                    x: 100,
+                    y: 240
+                },
+                    {
+                        name: 'ABA',
+                        x: 140,
+                        y: 300
+                    },
+
+                ],
+                // links: [],
+                links: [
+                    {
+                        source: 'PP2C',
+                        target: 'SnRK',
+                        label: {
+                            show:false
+                        },
+
+                        lineStyle: {
+                            curveness: 0
+                        }
+
+                    }, {
+                        source: 'SnRK',
+                        target: 'AREB',
+                        lineStyle: {
+                            curveness: 0.3
+                        }
+                    },
+                    {
+                        source: 'SnRK',
+                        target: 'ABI5',
+                        lineStyle: {
+                            curveness: -0.3
+                        }
+                        },{
+                        source: 'AREB',
+                        target: 'ABA'
+                    }, {
+                        source: 'ABI5',
+                        target: 'ABA'
+                    }, ],
+                lineStyle: {
+                    opacity: 0.9,
+                    width: 2,
+                    curveness: 0
+                }
+
+
+            },
+            {
+                type: 'graph',
+                layout: 'none',
+                symbolSize: 20,
+                roam: true,
+                //color:1,
+                label: {
+                    show: true
+                },
+
+                edgeSymbol: ['circle', 'arrow'],
+                edgeSymbolSize: [4, 10],
+                edgeLabel: {
+                    fontSize: 20
+                },
+                data: [
+                    {
+                        name: '',
+                        x: 0,
+                        y: 400
+                    },{
+                    name: 'HDA19',
+                    x: 120,
+                    y: 400
+                },
+                    {
+                        name: 'TPL',
+                        x: 140,
+                        y: 400
+                    }
+                ]},
+
+        ]
+    };
+
+    option && myChart.setOption(option);
+    myChart.on('click',function (params) {
+        if (params.name === "BR") {
+            window.open("http://www.baidu.com");
+        }
+        if (params.name === "BR1") {
+            window.open("https://www.ncbi.nlm.nih.gov/gene/829480");
+        }
+        if (params.name === "BAK1") {
+            window.open("https://www.ncbi.nlm.nih.gov/gene/829676");
+        }
+        if (params.name === "BSK1") {
+            window.open("https://www.ncbi.nlm.nih.gov/gene/827605");
+        }
+        if (params.name === "BSU1") {
+            window.open("https://www.ncbi.nlm.nih.gov/gene/838804");
+        }
+        if (params.name === "BIN2") {
+            window.open("https://www.ncbi.nlm.nih.gov/gene/827605");
+        }
+        if (params.name === "BZR1") {
+            window.open("https://www.ncbi.nlm.nih.gov/gene/843845");
+        }
+        if(params.name==="BZR2")
+        {
+            window.open(" https://www.ncbi.nlm.nih.gov/gene/838518");
+        }
+
+    })
+    myChart.on('mouseup',function (params) {
+        if (params.name === "BR") {
+            window.alert("油菜素内酯，植物激素");
+        }
+        if (params.name === "BR1") {
+            window.alert("蛋白激酶，细胞膜上BR的受体");
+        }
+        if (params.name === "BAK1") {
+            window.alert("蛋白激酶，细胞膜上BR1的共受体");
+        }
+        if (params.name === "BSK1") {
+            window.alert("BR1的底物");
+        }
+        if (params.name === "BSU1") {
+            window.alert("磷酸酶，位于BIN2的上游，抑制BIN2磷酸化BZR1");
+        }
+        // if (params.name === "BIN2") {
+        //     window.alert("https://www.ncbi.nlm.nih.gov/gene/827605");
+        // }
+        if (params.name === "BZR1") {
+            window.alert("BZR1和BES1在细胞核外以磷酸化的状态存在，BR会促进BZR1和BES1的去磷酸化，从而进入细胞核内。而细胞核内可以去磷酸化，进而调控下游基因的表达");
+        }
+        if(params.name==="BZR2")
+        {
+            window.alert(" BZR1和BES1在细胞核外以磷酸化的状态存在，BR会促进BZR1和BES1的去磷酸化，从而进入细胞核内。而细胞核内可以去磷酸化，进而调控下游基因的表达");
+        }
+
+    })
+
+</script>
+</body>
+</html>
