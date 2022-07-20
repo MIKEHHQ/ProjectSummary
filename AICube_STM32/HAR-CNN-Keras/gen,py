@@ -1,0 +1,17 @@
+import numpy as np
+
+xfile="E:\Desktop/HAR-CNN-Keras-master/testData.npy"
+yfile="E:\Desktop/HAR-CNN-Keras-master/groundTruth.npy"
+testx="E:\Desktop/HAR-CNN-Keras-master/testx.npy"
+testy="E:\Desktop/HAR-CNN-Keras-master/testy.npy"
+
+x=np.load(xfile)
+y=np.load(yfile)
+print(x.shape)
+print(y.shape)
+tx=x[4856:]
+ty=y[4856:]
+print(tx.shape)
+print(ty.shape)
+np.save(testx,tx)
+np.save(testy,ty)
