@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]F:\ZYNQ\Embedded_System\axi_gpio\axi_gpio.sdk\FSBL\Debug\FSBL.elf
+	F:\ZYNQ\Embedded_System\axi_gpio\axi_gpio.sdk\system_wrapper_hw_platform_0\system_wrapper.bit
+	F:\ZYNQ\Embedded_System\axi_gpio\axi_gpio.sdk\axi_gpio\Debug\axi_gpio.elf
+}

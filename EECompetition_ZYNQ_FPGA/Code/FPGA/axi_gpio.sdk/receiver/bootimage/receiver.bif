@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]E:\Users\milk\deskdop\FINAL\final_3\axi_gpio.sdk\receiver\Debug\receiver.elf
+	E:\Users\milk\deskdop\FINAL\final_3\axi_gpio.sdk\system_wrapper_hw_platform_3\system_wrapper.bit
+	E:\Users\milk\deskdop\FINAL\final_3\axi_gpio.sdk\axi_gpio\Debug\axi_gpio.elf
+}

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Nov 11 14:04:46 2021
+# Process ID: 17576
+# Current directory: E:/Users/milk/deskdop/ZYNQ/4_SourceCode/2_Embedded_System/ZYNQ_7020_SDK/7_axi_gpio_fsbl
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2624 E:\Users\milk\deskdop\ZYNQ\4_SourceCode\2_Embedded_System\ZYNQ_7020_SDK\7_axi_gpio_fsbl\axi_gpio.xpr
+# Log file: E:/Users/milk/deskdop/ZYNQ/4_SourceCode/2_Embedded_System/ZYNQ_7020_SDK/7_axi_gpio_fsbl/vivado.log
+# Journal file: E:/Users/milk/deskdop/ZYNQ/4_SourceCode/2_Embedded_System/ZYNQ_7020_SDK/7_axi_gpio_fsbl\vivado.jou
+#-----------------------------------------------------------sstart_guiopen_project E:/Users/milk/deskdop/ZYNQ/4_SourceCode/2_Embedded_System/ZYNQ_7020_SDK/7_axi_gpio_fsbl/axi_gpio.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace E:/Users/milk/deskdop/ZYNQ/4_SourceCode/2_Embedded_System/ZYNQ_7020_SDK/7_axi_gpio_fsbl/axi_gpio.sdk -hwspec E:/Users/milk/deskdop/ZYNQ/4_SourceCode/2_Embedded_System/ZYNQ_7020_SDK/7_axi_gpio_fsbl/axi_gpio.sdk/system_wrapper.hdf
